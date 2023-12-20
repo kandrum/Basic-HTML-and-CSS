@@ -1,0 +1,16 @@
+#heading{
+    text-align: center;
+}
+
+#login{
+    text-align: center;
+}
+
+#b{
+    display: grid;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center; 
+}

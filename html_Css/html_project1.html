@@ -4,49 +4,34 @@
 		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href= "/css_project1.css">
+		<link rel="stylesheet" href="css_project1.css">
+
 	</head>
-	<body>
-		<h1 id = "title">Codedamn HTML Playground</h1>
-        <p id = "description"> In software development and product management, a user story is an informal, 
-            natural language description of features of a software system. They are written
-             from the perspective of an end user or user of a system, and may be recorded on
-             index cards, Post-it notes, or digitally in specific management software.
-             Depending on the product, user stories may be written by different stakeholders like client, user, manager, or development team.</p>
-		<form id="survey-form">
-            <label for="name" id="name-label">Name :</label>
-			<input id ="name" type="text" placeholder="Enter name" required>
+	<body id="b">
+        <div id="heading">
+		<h1 >Welcome</h1> </div>
 
-            <label for="email" id="email-label">Email :</label>
-            <input id="email" type="email" placeholde ="john@gmail.com" required>
+        <div id="login">
+           Enter username : <input id ="user_name" type="text" placeholder= "user_name" required><br><br><br>
+           Enter Password : <input id ="password" type="password" placeholder="password" required><br><br><br>
+           confrim Password : <input id ="confrim_password" type="password" placeholder="confrim password" oninput="validate()" required><br><br><br>
+           <a href="html_loginpage.html" target="_blank">
+            <button>sign up</button>
+        </a>
 
-            <label for="qunatity" id="number-label">Enter number :</label>
-            <input id ="number" type = "number" min="1"max="1000000" required>
+        </div>    
+        <script>
+            function validate() {
+                var pass =document.getElementById("password").value;
+                var confrim_pass =document.getElementById("confrim_password").value;
+                if(pass != confrim_pass){
+                    document.getElementById("confrim_password").style.color = 'red';
+                } else {
+                    document.getElementById("confrim_password").style.color = 'green';
+                }
+            }
 
-            <label for="cars">Choose Topic:</label>
-            <select name="cars" id="dropdown">
-                   <option value="History">History</option>
-                   <option value="principal">principal</option>
-                   <option value="Example">Example</option>
-                   <option value="Usage">Usage</option>
-            </select>
-
-            <p>Who introduced c3 project</p>
-               <input type="radio"  value="Kent Beck"> Kent Beck
-               <input type="radio"  value="Ron Jeffries"> Ron Jeffries
-               <input type="radio"  value="Mike Cohn"> Mike Cohn
-  
-           <p>What is the use of story map</p>
-               <input type="checkbox" value="Flow of the product"> Flow of the product
-               <input type="checkbox" value="Flow of the Design"> Flow of the  design
-               <input type="checkbox" value="Flow of the project"> Flow of the project
-
-            <label for="comments">Additional Comments:</label>
-            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-
-            <input  id ="submit" type="submit" value="Submit">
-
-        </form>
-		<script src="/script.js"></script>
+        </script>
+		
 	</body>
 </html>
